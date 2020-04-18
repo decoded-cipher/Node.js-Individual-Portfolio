@@ -1,3 +1,45 @@
-body{
-    background-color: blue;
+body {
+    background-color: #001240;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 150px;
+    color: #fff;
+}
+
+.userPic {
+    height: 158px;
+    width: auto;
+    float: left;
+}
+
+.userDetails {
+    background-color: #00A7DB;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0px 15px;
+    flex-grow: 2;
+}
+
+.home {
+    background-color: #00C1EA;
+}
+
+.home, .projects, .contact {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }
