@@ -1,12 +1,17 @@
+const path = require('path')
 const express = require('express')
 const app = express()
 
-app.get('/', function (req, res) {
-    res.send('<h1>Hello World form Home...</h1>')
-})
+const publicDirectoryPath = path.join(__dirname, '/public')
+app.use(express.static(publicDirectoryPath));
 
-app.get('/about', function (req, res) {
-    res.send('<h1>Hello World form About Page...</h1>')
+app.set('view engine', 'hbs');
+
+app.get('/', function (req, res) {
+    res.render('index', {
+        title: "Home",
+        name: "Arjun"
+    });
 })
 
 app.listen(3000, () => {
